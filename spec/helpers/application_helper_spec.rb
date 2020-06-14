@@ -11,16 +11,16 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe ApplicationHelper, type: :helper do
-    describe "タイトルが正しく表示されているか" do
+    describe "#full_title" do
         context "page_titleが空の場合" do
             it "base_titleのみが表示される" do
-                expect (helper.full_title).to eq ('Planner')
+                expect (helper.full_title).to eq('Planner')
             end
         end
         
         context "page_titleが存在する場合" do
             it "base_titleとpage_titleが表示される" do
-                expect (helper.full_title('foo')).to eq ('foo | Planner')
+                expect (helper.full_title('foo')).to eq('foo | Planner')
             end
         end
     end

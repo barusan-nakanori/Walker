@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/home'
-  get 'static_pages/contact'
-    root 'static_pages#home'
-    get '/contact', to: 'static_pages#contact'
+  devise_for :users
+  root 'static_pages#home'
+  get '/contact', to: 'static_pages#contact'
 end
