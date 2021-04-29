@@ -1,0 +1,32 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  assignees:
+  - barusan-nakanori
+  versioning-strategy: lockfile-only
+  allow:
+  - dependency-type: direct
+  - dependency-type: indirect
+  ignore:
+  - dependency-name: nokogiri
+    versions:
+    - 1.11.1
+    - 1.11.2
+  - dependency-name: i18n
+    versions:
+    - 1.8.7
+    - 1.8.8
+    - 1.8.9
+  - dependency-name: capybara
+    versions:
+    - 3.35.1
+  - dependency-name: loofah
+    versions:
+    - 2.9.0
+  - dependency-name: autoprefixer-rails
+    versions:
+    - 10.2.0.0
